@@ -1,5 +1,5 @@
 # Getting and Cleaning Data Course Project
-*******************
+
 
 This repo contains all the script files, documentation files and final export file of the Coursera "Getting and Cleaning Data" course project.
 
