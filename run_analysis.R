@@ -49,7 +49,7 @@ mergeData <- mergeData[!duplicated(names(mergeData))]
 activityLabels <- read.table("./UCI_HAR_Dataset/activity_labels.txt")
 names(activityLabels) <- c("activityCode","activity")
 
-# Join the activityLabels data set with the mergeData data set in order to get labes of the activities 
+# Join the activityLabels data set with the mergeData data set in order to get labels of the activities 
 mergeData <- sqldf("select mergeData.*, activityLabels.activity from mergeData left outer join activityLabels on mergeData.activityCode = activityLabels.activityCode")
 
 # Create a new dataset containing only the mean() and std() columns
@@ -89,7 +89,7 @@ varNames<-c(c("subject","activity"),varNames)
 names(res)<-varNames
 
 # Export the final tidy data set in txt format
-write.table(res,file="./tidy_ds_with_average_values.txt",row.names = FALSE,quote=FALSE,append=FALSE)
+write.table(res,file="./tidy_ds_with_average_values.txt",row.names = FALSE,quote=FALSE,append=FALSE,sep="\t")
 
 # Delete unnecessary objects
 rm(groupedDS,tmp,measuresDS,name,varNames,varNames2)
