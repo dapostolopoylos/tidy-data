@@ -28,7 +28,7 @@ From each window, a vector of features was obtained by calculating variables fro
 
 ### Transformations
 
-Aditional packages used: dplyr, sqldf
+Additional packages used: dplyr, sqldf
 
 The data analysis consists of the following steps:
 
